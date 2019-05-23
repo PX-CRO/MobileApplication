@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Pexax Eğitim Merkezi</string>
+    <string name="title_activity_login">Giriş Yap</string>
+    <string name="txt_Description">
+        Bilim insanlarına göre atmosfer ve uzay arasındaki büyük sıcaklık farkı kullanan optoelektronik sistemler kullanılarak,
+        aynı güneş(solar) panellerindekine(fotodiyotlu) benzer şekilde elektrik elde edilebilir. Böylece güneş panellerinin
+        çalışmadığı gece vakitlerinde güneşten ve iklim koşullardan bağımsız olarak enerji elde edilebilir.
+        Solar panellerde genel olarak fotodiyotlar kullanılır. Fotodiyotlar güneşten gelen fotonları kullanarak,
+        silisyum gibi malzemelerdeki elektronları uyararak elektrik enerjisi elde etmeye yarar. Yapılan deneyde ise fotodiyotlar
+        tersine çalışarak  kızılötesi radyasyondan gelen fotonları , sistemde kalan ısı radyasyonunu kullanarak küçük miktarlarda enerji
+        oluşturabiliyor. Böylece deneysel sistemde negatif illüminasyon(aydınlanma) etkisi adı verilen bir avantajı kullanıyor. Bu etkide
+        Dünya’dan uzaya kaçan ısının oluşturduğu dış radyasyon akışı kullanılıyor. Bu yeni kurulumda, gökyüzüne çevrili kızılötesi yarı
+        iletkenle akış yakalanıyor ve elektrik akımına çevriliyor.
+
+        “Evrenin sonsuzluğu termodinamik bir kaynaktır. Optoelektronik fizik açısından, gerçekten gelen radyasyon ve çıkan radyasyon
+        arasında hasat yapmak için çok güzel bir simetri oluşuyor,” diyor Stanford Üniversitesi’nden Shanhui Fan. Bununla birlikte
+        geçtiğimiz sene Shanhui Fan’ın paylaştığı projede güneş panelinin ışığından enerji elde ederken, fazla ısının infrared radyasyon
+        olacak şekilde uzaya kaçtığını göstermişti. Sistemin İşe Yaradığı Gösterildi Yeni araştırmada ise gökyüzünden enerji elde etme
+        prosesinde ise ölçülebilir miktarda elektrik üretilebileceği gösterildi. Fakat halen enerji şebekelerine katkıda bulunabilecek
+        miktarda elektrik elde etmek için gidilmesi gereken uzun bir yol var. Ekibin deneylerinde m2 başına 64 nanowat elde edilebildi
+        her ne kadar bu çok küçük bir miktar gibi gözükse de, bu sistemin işe yarayacağını gösteren inanılmaz bir kanıt. Teoride doğru
+        materyaller ve koşullar sağlanırsa, milyon kat daha fazla yani m2’de 4 watt kadar enerji üretilebilir. “Şimdilik bu deneyde
+        üretilen güç halen teorik limitin çok altında yer alıyor,” diyor Stanford’dan Masashi Ono.
+
+    </string>
+
+    <string name="txtWebsite">www.huseyinbicen.com</string>
+
+    <string name="txtAdres">Batman Yolu 10.km, 56220 Merkez/Siirt Merkez/Siirt/Türkiye</string>
+
+
+    <string name="navigation_drawer_close">Kapat</string>
+    <string name="navigation_drawer_open">Aç</string>
+    <string name="title_activity_first">Pexax Eğitim Merkezi</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+</resources>

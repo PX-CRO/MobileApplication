@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group  android:checkableBehavior="single">
+        <item
+            android:id="@+id/dr_home"
+            android:title="Anasayfa"
+            android:icon="@drawable/icon_home" />
+        <item
+            android:id="@+id/dr_grade"
+            android:title="Notlarım"
+            android:icon="@drawable/icon_grade" />
+        <item
+            android:id="@+id/dr_discountinty"
+            android:title="Devamsızlık"
+            android:icon="@drawable/icon_disss" />
+
+        <item
+            android:id="@+id/dr_payment"
+            android:title="Ödemeler"
+            android:icon="@drawable/icon_payment" />
+
+    </group>
+
+    <item android:title="Diğer">
+        <menu>
+            <item
+                android:id="@+id/dr_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Paylaş" />
+            <item
+                android:id="@+id/dr_exit"
+                android:title="Çıkış"
+                android:icon="@drawable/icon_exit" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FragmentContact"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/contact_ImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:src="@mipmap/px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="casual"
+        android:text="Pexax Eğitim Merkezi"
+        android:textAlignment="center"
+        android:textColor="@color/indian_red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_ImageView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_text_title">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/contact_main_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoLink="phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/indian_red"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:text="@string/txt_Description"
+                android:textColor="@color/indian_red2"
+                app:layout_constraintBottom_toTopOf="@+id/main_text_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/main_text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoLink="phone"
+                android:drawableLeft="@drawable/contact_icon_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/indian_red"
+                android:gravity="left"
+                android:linksClickable="true"
+                android:text="+90 543 837 9296"
+                android:textColor="@color/indian_red2"
+                app:layout_constraintBottom_toTopOf="@+id/main_text_mail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/contact_main_text" />
+
+            <TextView
+                android:id="@+id/main_text_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="email"
+                android:drawableLeft="@drawable/contact_icon_mail"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/indian_red"
+                android:gravity="left"
+                android:linksClickable="true"
+                android:text="huseynbicen@gmail.com"
+                android:textColor="@color/indian_red2"
+                app:layout_constraintBottom_toTopOf="@+id/textAdres"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_text_phone" />
+
+            <TextView
+                android:id="@+id/textAdres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="web"
+                android:drawableLeft="@drawable/contact_icon_website"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/indian_red"
+                android:gravity="left"
+                android:linksClickable="true"
+                android:text="@string/txtWebsite"
+                android:textColor="@color/indian_red2"
+                app:layout_constraintBottom_toTopOf="@+id/contact_text_map"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_text_mail" />
+
+            <TextView
+                android:id="@+id/contact_text_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:autoLink="map"
+                android:drawableLeft="@drawable/contact_icon_map"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/indian_red"
+                android:gravity="left"
+                android:linksClickable="true"
+                android:text="Siirt Üniversitesi Kezer Yerleşkesi, Mühendislik Mimarlık Fakültesi Siirt/Merkez  Türkiye "
+                android:textColor="@color/indian_red2"
+                app:layout_constraintBottom_toTopOf="@+id/contact_text_copy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAdres" />
+
+            <TextView
+                android:id="@+id/contact_text_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/contact_icon_copyright"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/indian_red"
+                android:gravity="left"
+                android:text="© Copyright 2019 Pexax Eğitim Merkezi"
+                android:textColor="@color/indian_red2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contact_text_map" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
