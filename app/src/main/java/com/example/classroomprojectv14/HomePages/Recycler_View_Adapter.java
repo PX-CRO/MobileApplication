@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.classroomprojectv14.WebAPIClasses.Announcements;
 import com.example.classroomprojectv14.R;
 
 import java.util.Collections;
@@ -13,10 +14,11 @@ import java.util.List;
 
 public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder>
 {
-    List<Data> list = Collections.emptyList();
+    List<Announcements> list = Collections.emptyList();
+  //  List<Announcements> announcements = Collections.emptyList();
     Context context;
 
-    public Recycler_View_Adapter(List<Data> list, Context context) {
+    public Recycler_View_Adapter(List<Announcements> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -30,13 +32,15 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder>
 
     }
 
+
     @Override
     public void onBindViewHolder(View_Holder holder, int position) {
+        Context context = holder.cv.getContext();
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
-        holder.title.setText(list.get(position).title);
-        holder.description.setText(list.get(position).description);
-        holder.datetime.setText(list.get(position).datetime);
+        holder.title.setText(list.get(position).Title);
+        holder.description.setText(list.get(position).EntireContent);
+        holder.datetime.setText(list.get(position).Date);
 
         //animate(holder);
 
@@ -54,13 +58,13 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder>
     }
 
     // Insert a new item to the RecyclerView on a predefined position
-    public void insert(int position, Data data) {
+    public void insert(int position, Announcements data) {
         list.add(position, data);
         notifyItemInserted(position);
     }
 
-    // Remove a RecyclerView item containing a specified Data object
-    public void remove(Data data) {
+    // Remove a RecyclerView item containing a specifiedData object
+    public void remove(Announcements data) {
         int position = list.indexOf(data);
         list.remove(position);
         notifyItemRemoved(position);

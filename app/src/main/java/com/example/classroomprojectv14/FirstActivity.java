@@ -13,10 +13,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
+
 {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,6 +30,9 @@ public class FirstActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
+
+
         fab.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -37,11 +44,30 @@ public class FirstActivity extends AppCompatActivity
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView textViewName = headerView.findViewById(R.id.txt_name);
+
+        String bndName = "";
+        String bndLastName = "";
+        Bundle bnd = getIntent().getExtras();
+        if(bnd != null)
+        {
+            bndName = bnd.getString("name");
+            bndLastName = bnd.getString("surname");
+        }
+        Toast.makeText(getApplicationContext(), bndName.toString(),Toast.LENGTH_SHORT).show();
+        textViewName.setText("HOŞGELDİNİZ \n Sayın: " + bndName + " "+ bndLastName);
+
     }
 
     @Override
@@ -91,6 +117,7 @@ public class FirstActivity extends AppCompatActivity
 
         if (id == R.id.dr_home)
         {
+            Toast.makeText(getApplicationContext(),"BİLGİ", Toast.LENGTH_SHORT).show();
             // Handle the camera action
         }  else if (id == R.id.dr_grade)
         {

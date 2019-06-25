@@ -1,7 +1,6 @@
 package com.example.classroomprojectv14.Fragments4Main;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.classroomprojectv14.FirstActivity;
 import com.example.classroomprojectv14.R;
+import com.example.classroomprojectv14.WebAPIClasses.SerializeMailsForLogin;
 
 
 /**
@@ -21,10 +20,13 @@ import com.example.classroomprojectv14.R;
  */
 public class Login extends Fragment
 {
-    private TextView text_mail;
-    private TextView text_pass;
-    private Button button_login;
+    public TextView text_mail;
+    public TextView text_pass;
+    public Button button_login;
+    public String URL="http://10.34.44.176:55281/api/Students";
 
+    public String TAG = "Login";
+    SerializeMailsForLogin sMFL;
 
 
 
@@ -36,6 +38,7 @@ public class Login extends Fragment
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
     }
 
@@ -66,21 +69,27 @@ public class Login extends Fragment
             @Override
             public void onClick(View v)
             {
-                if(text_mail.getText().toString().equals("huseynbicen@gmail.com") && text_pass.getText().toString().equals("Hb.123"))
-                {
-                    Intent intent = new Intent(getActivity(), FirstActivity.class);
-                    intent.putExtra("Text", text_mail.getText().toString());
-                    startActivity(intent);
-                }
-                else
-                {
-                    text_pass.setText("");
-                    text_mail.setText("");
-                }
+              //  if(text_mail.getText().toString().equals("huseynbicen@gmail.com") && text_pass.getText().toString().equals("Hb.123"))
+              //  {
+               //    Intent intent = new Intent(getActivity(), FirstActivity.class);
+              //      intent.putExtra("Text", text_mail.getText().toString());
+              //      startActivity(intent);
+             //   }
+            //    else
+            //    {
+           //         text_pass.setText("");
+          //          text_mail.setText("");
+           //     }
 
-                Intent intent = new Intent(getActivity(), FirstActivity.class);
-                intent.putExtra("Text", text_mail.getText().toString());
-                startActivity(intent);
+           //     Intent intent = new Intent(getActivity(), FirstActivity.class);
+             //   intent.putExtra("Text", text_mail.getText().toString());
+             //   startActivity(intent);
+
+                   sMFL = new SerializeMailsForLogin(getActivity().getApplicationContext());
+                   sMFL.CallRestEvent(URL,text_mail,text_pass);
+
+
+
             }
         });
     }

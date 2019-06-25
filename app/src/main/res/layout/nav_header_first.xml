@@ -29,10 +29,10 @@
         android:textColor="@color/indian_red2"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sayın, Hüseyin Biçen"
+        android:text="Sayın"
         android:textColor="@color/indian_red2"/>
 
 </LinearLayout>
